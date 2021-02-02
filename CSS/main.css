@@ -1,0 +1,246 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
+nav {
+  width: 7%;
+  height: 200px;
+  position: fixed;
+  -webkit-transition: width 600ms ease-in-out;
+  transition: width 600ms ease-in-out;
+}
+
+section.projects {
+  -webkit-box-flex: 0.65;
+      -ms-flex: 0.65;
+          flex: 0.65;
+  position: relative;
+  height: 500px;
+  background-color: #ffffff;
+  border-radius: 2.5rem;
+}
+
+section.chats {
+  -webkit-box-flex: 0.35;
+      -ms-flex: 0.35;
+          flex: 0.35;
+  height: 350px;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  background-color: #dfe1ed;
+  margin: 0;
+  width: 100%;
+  font-family: "Poppins", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0px;
+}
+
+div.wrapper {
+  background-color: #f3f6fd;
+  width: 100%;
+}
+
+input[type="checkbox"] {
+  display: none;
+}
+
+input[name="navbar"]:checked + nav {
+  width: 17%;
+  -webkit-transition: width 600ms ease-in-out;
+  transition: width 600ms ease-in-out;
+}
+
+input[name="navbar"]:checked ~ div.container {
+  width: 80%;
+  left: 19%;
+}
+
+header {
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0px;
+  padding: 0 2rem 0 1rem;
+  width: 100%;
+  gap: 1rem 0px;
+  z-index: 9;
+  background-color: #f3f6fd;
+  -ms-grid-columns: 100px (minmax(70px, auto))[2] 1fr (minmax(10px, auto))[5];
+      grid-template-columns: 100px repeat(2, minmax(70px, auto)) 1fr repeat(5, minmax(10px, auto));
+      grid-template-areas: "nav title search spacer plus notification hr profile name";
+}
+
+header img {
+  width: 2.5rem;
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: nav;
+}
+
+header h1 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #1f1c2f;
+  padding: 0.2rem 1rem;
+  margin: 0 2rem;
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: title;
+  -ms-grid-column-align: center;
+      justify-self: center;
+}
+
+header input#search {
+  border-radius: 30px;
+  outline: none;
+  position: relative;
+  border: none;
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
+  grid-area: search;
+  padding: 0.5rem 1rem 0.5rem 2rem;
+  letter-spacing: 1px;
+  background: url("../Assests/baseline_search_black_36dp.png") no-repeat 10px;
+  background-size: 1.3rem;
+  background-color: #ffffff;
+  font-size: 1.2rem;
+  font-weight: normal;
+  color: #1f1c2f;
+}
+
+header input#search::-webkit-input-placeholder {
+  font-size: 1rem;
+  font-weight: normal;
+  color: #898989;
+}
+
+header input#search:-ms-input-placeholder {
+  font-size: 1rem;
+  font-weight: normal;
+  color: #898989;
+}
+
+header input#search::-ms-input-placeholder {
+  font-size: 1rem;
+  font-weight: normal;
+  color: #898989;
+}
+
+header input#search::placeholder {
+  font-size: 1rem;
+  font-weight: normal;
+  color: #898989;
+}
+
+header div.spacer {
+  grid-row: 1fr;
+  -ms-grid-row: 1;
+  -ms-grid-column: 4;
+  grid-area: spacer;
+}
+
+header i#plus,
+header i#notification {
+  -ms-grid-row: 1;
+  -ms-grid-column: 5;
+  grid-area: plus;
+  font-size: 1.6rem;
+  margin: 0 0.7rem;
+}
+
+header i#notification {
+  -ms-grid-row: 1;
+  -ms-grid-column: 6;
+  grid-area: notification;
+}
+
+header hr {
+  width: 0.15rem;
+  height: 3rem;
+  -ms-grid-row: 1;
+  -ms-grid-column: 7;
+  grid-area: hr;
+  background-color: #898989;
+  border: none;
+}
+
+header img {
+  border-radius: 50%;
+  margin: 0 0.7rem;
+  -ms-grid-row: 1;
+  -ms-grid-column: 8;
+  grid-area: profile;
+  -ms-grid-column-align: right;
+      justify-self: right;
+}
+
+header h4 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #1f1c2f;
+  -ms-grid-row: 1;
+  -ms-grid-column: 9;
+  grid-area: name;
+}
+
+section.main-container {
+  position: relative;
+}
+
+section.main-container div.container {
+  width: 90%;
+  position: relative;
+  left: 8.5%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-transition: left 600ms ease-in-out,width 600ms ease-in-out;
+  transition: left 600ms ease-in-out,width 600ms ease-in-out;
+}
+
+@media screen and (min-width: 1300px) {
+  div.wrapper {
+    width: 92%;
+    margin: 3rem auto;
+    border-radius: 2.5rem;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  header {
+    -ms-grid-columns: minmax(10px, auto) 1fr (minmax(10px, auto))[2];
+        grid-template-columns: minmax(10px, auto) 1fr repeat(2, minmax(10px, auto));
+        grid-template-areas: "nav title profile name" "search search plus notification  ";
+  }
+  header div.spacer,
+  header hr {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  header {
+    padding: 0 0.3rem;
+    -ms-grid-columns: minmax(10px, auto) 1fr (minmax(10px, auto))[2];
+        grid-template-columns: minmax(10px, auto) 1fr repeat(2, minmax(10px, auto));
+        grid-template-areas: "nav title profile profile" "search search plus notification  ";
+  }
+  header h4 {
+    display: none;
+  }
+}
+/*# sourceMappingURL=main.css.map */

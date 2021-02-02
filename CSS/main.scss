@@ -1,0 +1,171 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
+
+$bodybackground: #dfe1ed;
+$background: #f3f6fd;
+$font-dark: #1f1c2f;
+$font-light: #898989;
+$theme-sky: #2bc8ff;
+$theme-sky-bg: #dbf6fd;
+$theme-orange: #ff723a;
+$theme-orange-bg: #fee4cb;
+$theme-green: #02d052;
+$theme-green-bg: #baf3d2;
+$theme-pink: #ff72ac;
+$theme-pink-bg: #ffd3e2;
+$theme-violet: #6858ff;
+$theme-violet-bg: #e9e7fd;
+$theme-yellow: #ffc554;
+$theme-yellow-bg: #fff0d3;
+$white: #ffffff;
+@import "./modules/navbar";
+@import "./modules/projects";
+@import "./modules/chats";
+
+@mixin fontstyle($size: 1rem, $weight: normal, $color: $font-light) {
+  font-size: $size;
+  font-weight: $weight;
+  color: $color;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  background-color: $bodybackground;
+  margin: 0;
+  width: 100%;
+  font-family: "Poppins", sans-serif;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0px;
+}
+div.wrapper {
+  background-color: $background;
+  width: 100%;
+}
+input[type="checkbox"] {
+  display: none;
+}
+input[name="navbar"]:checked + nav{
+  width: 17%;
+  transition: width 600ms ease-in-out;
+}
+input[name="navbar"]:checked ~ div.container{
+  width: 80%;
+  left: 19%;
+}
+header {
+  display: grid;
+  align-items: center;
+  position: sticky;
+  top: 0px;
+  padding: 0 2rem 0 1rem;
+  width: 100%;
+  gap: 1rem 0px;
+  z-index: 9;
+  background-color: $background;
+  grid-template-columns: 100px repeat(2, minmax(70px, auto)) 1fr repeat(
+      5,
+      minmax(10px, auto)
+    );
+  grid-template-areas: "nav title search spacer plus notification hr profile name";
+  img {
+    width: 2.5rem;
+    grid-area: nav;
+  }
+  h1 {
+    @include fontstyle(1.8rem, 600, $font-dark);
+    padding: 0.2rem 1rem;
+    margin: 0 2rem;
+    grid-area: title;
+    justify-self: center;
+  }
+  input#search {
+    border-radius: 30px;
+    outline: none;
+    position: relative;
+    border: none;
+    grid-area: search;
+    padding: 0.5rem 1rem 0.5rem 2rem;
+    letter-spacing: 1px;
+    background: url("../Assests/baseline_search_black_36dp.png") no-repeat 10px;
+    background-size: 1.3rem;
+    background-color: $white;
+    @include fontstyle(1.2rem, normal, $font-dark);
+    &::placeholder {
+      @include fontstyle(1rem, normal, $font-light);
+    }
+    
+  }
+  div.spacer {
+    grid-row: 1fr;
+    grid-area: spacer;
+  }
+  i#plus,
+  i#notification {
+    grid-area: plus;
+    font-size: 1.6rem;
+    margin: 0 0.7rem;
+  }
+  i#notification {
+    grid-area: notification;
+  }
+  hr {
+    width: 0.15rem;
+    height: 3rem;
+    grid-area: hr;
+    background-color: $font-light;
+    border: none;
+  }
+  img {
+    border-radius: 50%;
+    margin: 0 0.7rem;
+    grid-area: profile;
+    justify-self: right;
+  }
+  h4 {
+    @include fontstyle(1.2rem, 600, $font-dark);
+    grid-area: name;
+  }
+}
+section.main-container {
+  position: relative;
+  div.container{
+    width: 90%;
+    position: relative;
+    left: 8.5% ;
+    display: flex;
+    transition: left 600ms ease-in-out,width 600ms ease-in-out;
+  }
+}
+@media screen and (min-width: 1300px) {
+  div.wrapper {
+    width: 92%;
+    margin: 3rem auto;
+    border-radius: 2.5rem;
+  }
+}
+@media screen and (max-width: 800px) {
+  header {
+    grid-template-columns: minmax(10px, auto) 1fr repeat(2, minmax(10px, auto));
+    grid-template-areas: "nav title profile name" "search search plus notification  ";
+    div.spacer,
+    hr {
+      display: none;
+    }
+  }
+}
+@media screen and (max-width: 480px) {
+  header {
+    padding: 0 0.3rem;
+    grid-template-columns: minmax(10px, auto) 1fr repeat(2, minmax(10px, auto));
+    grid-template-areas: "nav title profile profile" "search search plus notification  ";
+    h4 {
+      display: none;
+    }
+  }
+}

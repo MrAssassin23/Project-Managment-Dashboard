@@ -1,0 +1,7 @@
+section.chats {
+  -webkit-box-flex: 0.35;
+      -ms-flex: 0.35;
+          flex: 0.35;
+  height: 350px;
+}
+/*# sourceMappingURL=chats.css.map */

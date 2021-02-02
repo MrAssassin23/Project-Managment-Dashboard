@@ -1,0 +1,8 @@
+nav {
+  width: 7%;
+  height: 200px;
+  position: fixed;
+  -webkit-transition: width 600ms ease-in-out;
+  transition: width 600ms ease-in-out;
+}
+/*# sourceMappingURL=navbar.css.map */
