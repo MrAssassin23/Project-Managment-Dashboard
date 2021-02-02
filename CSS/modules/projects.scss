@@ -3,5 +3,6 @@ section.projects{
     position: relative;
     height: 500px;
     background-color: $white;
-    border-radius: 2.5rem;
+    border-top-left-radius:  2.5rem;
+    border-top-right-radius:  2.5rem;
 }

@@ -46,6 +46,7 @@ h6 {
 div.wrapper {
   background-color: $background;
   width: 100%;
+  border-radius: 2.5rem;
 }
 input[type="checkbox"] {
   display: none;
@@ -63,24 +64,29 @@ header {
   align-items: center;
   position: sticky;
   top: 0px;
-  padding: 0 2rem 0 1rem;
+  padding: 0.8rem 2rem 0.8rem 0rem;
   width: 100%;
   gap: 1rem 0px;
   z-index: 9;
   background-color: $background;
-  grid-template-columns: 100px repeat(2, minmax(70px, auto)) 1fr repeat(
+  border-top-left-radius:  2.5rem;
+  border-top-right-radius:  2.5rem;
+  grid-template-columns: 8.5% 25% 35% 1fr repeat(
       5,
-      minmax(10px, auto)
+      minmax(40px, auto)
     );
   grid-template-areas: "nav title search spacer plus notification hr profile name";
-  img {
-    width: 2.5rem;
-    grid-area: nav;
+  label{
+    margin: 10px auto;
+  }
+  img#nav {
+    width: 2.2rem;
+    grid-area: nav;    
   }
   h1 {
     @include fontstyle(1.8rem, 600, $font-dark);
     padding: 0.2rem 1rem;
-    margin: 0 2rem;
+    margin: 0 2rem 0 0;
     grid-area: title;
     justify-self: center;
   }
@@ -89,15 +95,16 @@ header {
     outline: none;
     position: relative;
     border: none;
+    min-width: 10rem;
     grid-area: search;
-    padding: 0.5rem 1rem 0.5rem 2rem;
+    padding: 0.7rem 1rem 0.7rem 2.5rem;
     letter-spacing: 1px;
     background: url("../Assests/baseline_search_black_36dp.png") no-repeat 10px;
-    background-size: 1.3rem;
+    background-size: 1.7rem;
     background-color: $white;
-    @include fontstyle(1.2rem, normal, $font-dark);
+    @include fontstyle(1.3rem, normal, $font-dark);
     &::placeholder {
-      @include fontstyle(1rem, normal, $font-light);
+      @include fontstyle(1.1rem, normal, $font-light);
     }
     
   }
@@ -108,11 +115,12 @@ header {
   i#plus,
   i#notification {
     grid-area: plus;
-    font-size: 1.6rem;
+    font-size: 2.1rem;
     margin: 0 0.7rem;
   }
   i#notification {
     grid-area: notification;
+    font-size: 1.8rem;
   }
   hr {
     width: 0.15rem;
@@ -121,11 +129,11 @@ header {
     background-color: $font-light;
     border: none;
   }
-  img {
+  img#profile {
     border-radius: 50%;
     margin: 0 0.7rem;
+    width: 2.5rem;
     grid-area: profile;
-    justify-self: right;
   }
   h4 {
     @include fontstyle(1.2rem, 600, $font-dark);
@@ -142,28 +150,29 @@ section.main-container {
     transition: left 600ms ease-in-out,width 600ms ease-in-out;
   }
 }
-@media screen and (min-width: 1300px) {
-  div.wrapper {
-    width: 92%;
-    margin: 3rem auto;
-    border-radius: 2.5rem;
-  }
-}
 @media screen and (max-width: 800px) {
   header {
     grid-template-columns: minmax(10px, auto) 1fr repeat(2, minmax(10px, auto));
     grid-template-areas: "nav title profile name" "search search plus notification  ";
+    padding: 0.8rem 2rem ;
     div.spacer,
     hr {
       display: none;
+    }
+    h1 {
+      @include fontstyle(1.8rem, 600, $font-dark);
+      padding: 0.2rem 1rem;
+      margin: 0;
+      grid-area: title;
+      justify-self: center;
     }
   }
 }
 @media screen and (max-width: 480px) {
   header {
-    padding: 0 0.3rem;
+    padding: 0.6 0.5rem;
     grid-template-columns: minmax(10px, auto) 1fr repeat(2, minmax(10px, auto));
-    grid-template-areas: "nav title profile profile" "search search plus notification  ";
+    grid-template-areas: "nav title title profile" "search search plus notification  ";
     h4 {
       display: none;
     }
