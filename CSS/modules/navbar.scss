@@ -1,7 +1,70 @@
-nav{
-    width: 7%;
-    height: 200px;
-    // background-color: $theme-green;
-    position: fixed;
-    transition: width 600ms ease-in-out; 
+input[name="navbar"]:checked + nav {
+  width: 17%;
+  transition: width 600ms ease-in-out;
+  align-items: flex-start;
+  label {
+    width: 90%;
+    margin-left: 1rem;
+    padding-left: 0.5rem;
+    justify-content: flex-start;
+  }
+  h4 {
+    width: 80%;
+  }
+}
+@mixin nav-focus($inputelement, $focuselement) {
+  ##{$inputelement}:checked ~ label##{$focuselement} {
+    background-color: $font-dark;
+    color: $white;
+    border-radius: 35px;
+    .stroke-transparent {
+      -webkit-text-stroke: 2px $white;
+      -webkit-text-fill-color: transparent;
+    }
+  }
+}
+@include nav-focus(nav1, nav1);
+@include nav-focus(nav2, nav2);
+@include nav-focus(nav3, nav3);
+@include nav-focus(nav4, nav4);
+@include nav-focus(nav5, nav5);
+@include nav-focus(nav6, nav6);
+nav {
+  width: 8.5%;
+  position: fixed;
+  transition: width 600ms ease-in-out;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  i#nav-icon {
+    font-size: 1.6rem;
+    padding: 0.4rem 0.6rem;
+    margin: 0.4rem 0;
+    color: inherit;
+  }
+  label {
+    display: flex;
+    width: 3.2rem;
+    align-items: center;
+    justify-content: center;
+    color: $font-light;
+    margin: 0.5rem 0;
+    transition: width 600ms ease-in-out;
+    &:hover {
+      background-color: $font-dark;
+      color: $white;
+      border-radius: 35px;
+      .stroke-transparent {
+        -webkit-text-stroke: 2px $white;
+        -webkit-text-fill-color: transparent;
+      }
+    }
+  }
+  h4 {
+    width: 0px;
+    overflow: hidden;
+    font-size: 1.2rem;
+    font-weight: 500;
+    transition: width 600ms ease-in-out;
+  }
 }

@@ -1,8 +1,149 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+input[name="navbar"]:checked + nav {
+  width: 17%;
+  -webkit-transition: width 600ms ease-in-out;
+  transition: width 600ms ease-in-out;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+input[name="navbar"]:checked + nav label {
+  width: 90%;
+  margin-left: 1rem;
+  padding-left: 0.5rem;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+input[name="navbar"]:checked + nav h4 {
+  width: 80%;
+}
+
+#nav1:checked ~ label#nav1 {
+  background-color: #1f1c2f;
+  color: #ffffff;
+  border-radius: 35px;
+}
+
+#nav1:checked ~ label#nav1 .stroke-transparent {
+  -webkit-text-stroke: 2px #ffffff;
+  -webkit-text-fill-color: transparent;
+}
+
+#nav2:checked ~ label#nav2 {
+  background-color: #1f1c2f;
+  color: #ffffff;
+  border-radius: 35px;
+}
+
+#nav2:checked ~ label#nav2 .stroke-transparent {
+  -webkit-text-stroke: 2px #ffffff;
+  -webkit-text-fill-color: transparent;
+}
+
+#nav3:checked ~ label#nav3 {
+  background-color: #1f1c2f;
+  color: #ffffff;
+  border-radius: 35px;
+}
+
+#nav3:checked ~ label#nav3 .stroke-transparent {
+  -webkit-text-stroke: 2px #ffffff;
+  -webkit-text-fill-color: transparent;
+}
+
+#nav4:checked ~ label#nav4 {
+  background-color: #1f1c2f;
+  color: #ffffff;
+  border-radius: 35px;
+}
+
+#nav4:checked ~ label#nav4 .stroke-transparent {
+  -webkit-text-stroke: 2px #ffffff;
+  -webkit-text-fill-color: transparent;
+}
+
+#nav5:checked ~ label#nav5 {
+  background-color: #1f1c2f;
+  color: #ffffff;
+  border-radius: 35px;
+}
+
+#nav5:checked ~ label#nav5 .stroke-transparent {
+  -webkit-text-stroke: 2px #ffffff;
+  -webkit-text-fill-color: transparent;
+}
+
+#nav6:checked ~ label#nav6 {
+  background-color: #1f1c2f;
+  color: #ffffff;
+  border-radius: 35px;
+}
+
+#nav6:checked ~ label#nav6 .stroke-transparent {
+  -webkit-text-stroke: 2px #ffffff;
+  -webkit-text-fill-color: transparent;
+}
+
 nav {
-  width: 7%;
-  height: 200px;
+  width: 8.5%;
   position: fixed;
+  -webkit-transition: width 600ms ease-in-out;
+  transition: width 600ms ease-in-out;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+nav i#nav-icon {
+  font-size: 1.6rem;
+  padding: 0.4rem 0.6rem;
+  margin: 0.4rem 0;
+  color: inherit;
+}
+
+nav label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 3.2rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: #898989;
+  margin: 0.5rem 0;
+  -webkit-transition: width 600ms ease-in-out;
+  transition: width 600ms ease-in-out;
+}
+
+nav label:hover {
+  background-color: #1f1c2f;
+  color: #ffffff;
+  border-radius: 35px;
+}
+
+nav label:hover .stroke-transparent {
+  -webkit-text-stroke: 2px #ffffff;
+  -webkit-text-fill-color: transparent;
+}
+
+nav h4 {
+  width: 0px;
+  overflow: hidden;
+  font-size: 1.2rem;
+  font-weight: 500;
   -webkit-transition: width 600ms ease-in-out;
   transition: width 600ms ease-in-out;
 }
@@ -52,19 +193,18 @@ div.wrapper {
   border-radius: 2.5rem;
 }
 
-input[type="checkbox"] {
+input[type="checkbox"], input[type="radio"] {
   display: none;
-}
-
-input[name="navbar"]:checked + nav {
-  width: 17%;
-  -webkit-transition: width 600ms ease-in-out;
-  transition: width 600ms ease-in-out;
 }
 
 input[name="navbar"]:checked ~ div.container {
   width: 80%;
   left: 19%;
+}
+
+.stroke-transparent {
+  -webkit-text-stroke: 2px #898989;
+  -webkit-text-fill-color: transparent;
 }
 
 header {
@@ -195,6 +335,8 @@ header img#profile {
   -ms-grid-row: 1;
   -ms-grid-column: 8;
   grid-area: profile;
+  -ms-grid-column-align: center;
+      justify-self: center;
 }
 
 header h4 {
@@ -248,7 +390,7 @@ section.main-container div.container {
 
 @media screen and (max-width: 480px) {
   header {
-    padding: 0.6 0.5rem;
+    padding: 0.6rem 1rem;
     -ms-grid-columns: minmax(10px, auto) 1fr (minmax(10px, auto))[2];
         grid-template-columns: minmax(10px, auto) 1fr repeat(2, minmax(10px, auto));
         grid-template-areas: "nav title title profile" "search search plus notification  ";

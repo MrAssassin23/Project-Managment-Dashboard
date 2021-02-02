@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Project Management Dashboard</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
     <link rel="stylesheet" href="CSS/main.css">
 </head>
 
@@ -17,7 +18,7 @@
             <input type="search" name="search" id="search" placeholder="Search" autocomplete="off">
             <div class="spacer"></div>
             <i class="fa fa-plus-circle" id="plus"></i>
-            <i class="fa fa-bell-o" id="notification"></i>
+            <i class="far fa-bell" id="notification"></i>
             <hr>
             <img src="Assests/user5.jpg" id="profile">
             <h4>Hira R</h4>
@@ -26,7 +27,36 @@
         <section class="main-container">
             <input type="checkbox" name="navbar" id="nav-toogle">
             <nav>
-
+                <input type="radio" name="nav-item" id="nav1" checked>
+                <input type="radio" name="nav-item" id="nav2">
+                <input type="radio" name="nav-item" id="nav3">
+                <input type="radio" name="nav-item" id="nav4">
+                <input type="radio" name="nav-item" id="nav5">
+                <input type="radio" name="nav-item" id="nav6">
+                <label for="nav1" id="nav1">
+                    <i class="fas fa-home stroke-transparent" id="nav-icon"></i>
+                    <h4>Home</h4>
+                </label>
+                <label for="nav2" id="nav2">
+                    <i class="far fa-user-circle " id="nav-icon"></i>
+                    <h4>Profile</h4>
+                </label>
+                <label for="nav3" id="nav3">
+                    <i class="far fa-comment-alt " id="nav-icon"></i>
+                    <h4>Chats</h4>
+                </label>
+                <label for="nav4" id="nav4">
+                    <i class="far fa-calendar-alt " id="nav-icon"></i>
+                    <h4>Schedule</h4>
+                </label>
+                <label for="nav5" id="nav5">
+                    <i class="far fa-clock " id="nav-icon"></i>
+                    <h4> Clock </h4>
+                </label>
+                <label for="nav6" id="nav6">
+                    <i class="fa fa-cog stroke-transparent" id="nav-icon"></i>
+                    <h4>Setings</h4>
+                </label>
             </nav>
             <div class="container">
                 <section class="projects">

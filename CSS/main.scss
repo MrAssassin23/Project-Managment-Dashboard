@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
 
 $bodybackground: #dfe1ed;
 $background: #f3f6fd;
@@ -48,18 +48,18 @@ div.wrapper {
   width: 100%;
   border-radius: 2.5rem;
 }
-input[type="checkbox"] {
+input[type="checkbox"], input[type="radio"]{
   display: none;
-}
-input[name="navbar"]:checked + nav{
-  width: 17%;
-  transition: width 600ms ease-in-out;
 }
 input[name="navbar"]:checked ~ div.container{
   width: 80%;
   left: 19%;
 }
-header {
+.stroke-transparent {
+  -webkit-text-stroke: 2px $font-light;
+  -webkit-text-fill-color: transparent;
+ }
+header {  
   display: grid;
   align-items: center;
   position: sticky;
@@ -105,8 +105,7 @@ header {
     @include fontstyle(1.3rem, normal, $font-dark);
     &::placeholder {
       @include fontstyle(1.1rem, normal, $font-light);
-    }
-    
+    } 
   }
   div.spacer {
     grid-row: 1fr;
@@ -134,6 +133,7 @@ header {
     margin: 0 0.7rem;
     width: 2.5rem;
     grid-area: profile;
+    justify-self: center;
   }
   h4 {
     @include fontstyle(1.2rem, 600, $font-dark);
@@ -170,7 +170,7 @@ section.main-container {
 }
 @media screen and (max-width: 480px) {
   header {
-    padding: 0.6 0.5rem;
+    padding: 0.6rem 1rem;
     grid-template-columns: minmax(10px, auto) 1fr repeat(2, minmax(10px, auto));
     grid-template-areas: "nav title title profile" "search search plus notification  ";
     h4 {
