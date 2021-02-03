@@ -32,10 +32,17 @@ input[name="navbar"]:checked + nav {
 nav {
   width: 8.5%;
   position: fixed;
-  transition: width 600ms ease-in-out;
+  transition: width 600ms ease-in-out, transform 600ms ease-in-out;
   display: flex;
   flex-direction: column;
   align-items: center;
+  height: calc(100vh - 6rem);
+  background-color: $background;
+  overflow-y: scroll;
+  z-index: 999;
+  &::-webkit-scrollbar {
+    display: none;
+  }
   i#nav-icon {
     font-size: 1.6rem;
     padding: 0.4rem 0.6rem;
@@ -67,5 +74,24 @@ nav {
     font-size: 1.1rem;
     font-weight: 500;
     transition: width 600ms ease-in-out;
+  }
+}
+@media screen and (max-width: 1000px) {
+  nav {
+    transform: translateX(-100%);
+  }
+  input[name="navbar"]:checked + nav {
+    width: 30%;
+    transform: translateX(0px);
+  }
+}
+@media screen and (max-width: 650px) {
+  input[name="navbar"]:checked + nav {
+    width: 50%;
+  }
+}
+@media screen and (max-width: 480px) {
+  input[name="navbar"]:checked + nav {
+    width: 80%;
   }
 }

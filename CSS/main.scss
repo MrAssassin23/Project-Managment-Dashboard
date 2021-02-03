@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
 
 $bodybackground: #dfe1ed;
 $background: #f3f6fd;
@@ -23,7 +23,11 @@ $white: #ffffff;
   font-weight: $weight;
   color: $color;
 }
-@mixin displayflex($direction:row, $align-item: stretch, $justify-content : flex-start){
+@mixin displayflex(
+  $direction: row,
+  $align-item: stretch,
+  $justify-content: flex-start
+) {
   display: flex;
   flex-direction: $direction;
   align-items: $align-item;
@@ -56,18 +60,19 @@ div.wrapper {
   width: 100%;
   border-radius: 2.5rem;
 }
-input[type="checkbox"], input[type="radio"]{
+input[type="checkbox"],
+input[type="radio"] {
   display: none;
 }
-input[name="navbar"]:checked ~ div.container{
+input[name="navbar"]:checked ~ div.container {
   width: 81%;
   left: 18%;
 }
 .stroke-transparent {
   -webkit-text-stroke: 2px $font-light;
   -webkit-text-fill-color: transparent;
- }
-header {  
+}
+header {
   display: grid;
   align-items: center;
   position: sticky;
@@ -77,19 +82,16 @@ header {
   gap: 1rem 0px;
   z-index: 9;
   background-color: $background;
-  border-top-left-radius:  2.5rem;
-  border-top-right-radius:  2.5rem;
-  grid-template-columns: 8.5% 25% 35% 1fr repeat(
-      5,
-      minmax(40px, auto)
-    );
+  border-top-left-radius: 2.5rem;
+  border-top-right-radius: 2.5rem;
+  grid-template-columns: 8.5% 25% 35% 1fr repeat(5, minmax(40px, auto));
   grid-template-areas: "nav title search spacer plus notification hr profile name";
-  label{
+  label {
     margin: 10px auto;
   }
   img#nav {
     width: 2.2rem;
-    grid-area: nav;    
+    grid-area: nav;
   }
   h1 {
     @include fontstyle(1.8rem, 600, $font-dark);
@@ -113,7 +115,7 @@ header {
     @include fontstyle(1.3rem, normal, $font-dark);
     &::placeholder {
       @include fontstyle(1.1rem, normal, $font-light);
-    } 
+    }
   }
   div.spacer {
     grid-row: 1fr;
@@ -150,19 +152,40 @@ header {
 }
 section.main-container {
   position: relative;
-  div.container{
+  div.container {
     width: 90%;
     position: relative;
-    left: 8.5% ;
+    left: 8.5%;
     display: flex;
-    transition: left 600ms ease-in-out,width 600ms ease-in-out;
+    transition: left 600ms ease-in-out, width 600ms ease-in-out;
+  }
+}
+@media screen and (max-width: 1000px) {
+  section.main-container {
+    div.container {
+      width: 99%;
+      display: flex;
+      left: 0%;
+      transition: left 600ms ease-in-out, width 600ms ease-in-out;
+    }
+  }
+  input[name="navbar"]:checked ~ div.container {
+    width: 99%;
+    left: 0%;
+  }
+}
+@media screen and (max-width: 900px) {
+  section.main-container {
+    div.container {
+      flex-direction: column;
+    }
   }
 }
 @media screen and (max-width: 800px) {
   header {
     grid-template-columns: minmax(10px, auto) 1fr repeat(2, minmax(10px, auto));
     grid-template-areas: "nav title profile name" "search search plus notification  ";
-    padding: 0.8rem 2rem ;
+    padding: 0.8rem 2rem;
     div.spacer,
     hr {
       display: none;

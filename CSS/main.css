@@ -90,8 +90,10 @@ input[name="navbar"]:checked + nav h4 {
 nav {
   width: 8.5%;
   position: fixed;
-  -webkit-transition: width 600ms ease-in-out;
-  transition: width 600ms ease-in-out;
+  -webkit-transition: width 600ms ease-in-out, -webkit-transform 600ms ease-in-out;
+  transition: width 600ms ease-in-out, -webkit-transform 600ms ease-in-out;
+  transition: width 600ms ease-in-out, transform 600ms ease-in-out;
+  transition: width 600ms ease-in-out, transform 600ms ease-in-out, -webkit-transform 600ms ease-in-out;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -102,6 +104,14 @@ nav {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  height: calc(100vh - 6rem);
+  background-color: #f3f6fd;
+  overflow-y: scroll;
+  z-index: 999;
+}
+
+nav::-webkit-scrollbar {
+  display: none;
 }
 
 nav i#nav-icon {
@@ -147,6 +157,30 @@ nav h4 {
   font-weight: 500;
   -webkit-transition: width 600ms ease-in-out;
   transition: width 600ms ease-in-out;
+}
+
+@media screen and (max-width: 1000px) {
+  nav {
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+  }
+  input[name="navbar"]:checked + nav {
+    width: 30%;
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+  }
+}
+
+@media screen and (max-width: 650px) {
+  input[name="navbar"]:checked + nav {
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  input[name="navbar"]:checked + nav {
+    width: 80%;
+  }
 }
 
 section.projects {
@@ -264,7 +298,7 @@ div.projects {
   display: grid;
   -ms-grid-columns: 1fr 1fr;
       grid-template-columns: 1fr 1fr;
-  grid-gap: 10%;
+  grid-gap: 4rem 10%;
 }
 
 div.projects div#project1 {
@@ -438,13 +472,13 @@ div.projects div#project1 div.row-users div.users #user-1 {
 }
 
 div.projects div#project1 div.row-users div.users #user-2 {
-  left: 1.8rem;
+  left: 1.55rem;
 }
 
 div.projects div#project1 div.row-users div.users i#plus {
   position: relative;
   font-size: 2rem;
-  left: 4rem;
+  left: 3.8rem;
   color: #2bc8ff;
 }
 
@@ -454,7 +488,7 @@ div.projects div#project1 div.row-users h5 {
   font-size: 0.9rem;
   font-weight: 600;
   color: #2bc8ff;
-  padding: 0.5rem 2rem;
+  padding: 0.5rem 8%;
   border-radius: 1.1rem;
 }
 
@@ -629,13 +663,13 @@ div.projects div#project2 div.row-users div.users #user-1 {
 }
 
 div.projects div#project2 div.row-users div.users #user-2 {
-  left: 1.8rem;
+  left: 1.55rem;
 }
 
 div.projects div#project2 div.row-users div.users i#plus {
   position: relative;
   font-size: 2rem;
-  left: 4rem;
+  left: 3.8rem;
   color: #ff723a;
 }
 
@@ -645,7 +679,7 @@ div.projects div#project2 div.row-users h5 {
   font-size: 0.9rem;
   font-weight: 600;
   color: #ff723a;
-  padding: 0.5rem 2rem;
+  padding: 0.5rem 8%;
   border-radius: 1.1rem;
 }
 
@@ -820,13 +854,13 @@ div.projects div#project3 div.row-users div.users #user-1 {
 }
 
 div.projects div#project3 div.row-users div.users #user-2 {
-  left: 1.8rem;
+  left: 1.55rem;
 }
 
 div.projects div#project3 div.row-users div.users i#plus {
   position: relative;
   font-size: 2rem;
-  left: 4rem;
+  left: 3.8rem;
   color: #02d052;
 }
 
@@ -836,7 +870,7 @@ div.projects div#project3 div.row-users h5 {
   font-size: 0.9rem;
   font-weight: 600;
   color: #02d052;
-  padding: 0.5rem 2rem;
+  padding: 0.5rem 8%;
   border-radius: 1.1rem;
 }
 
@@ -1011,13 +1045,13 @@ div.projects div#project4 div.row-users div.users #user-1 {
 }
 
 div.projects div#project4 div.row-users div.users #user-2 {
-  left: 1.8rem;
+  left: 1.55rem;
 }
 
 div.projects div#project4 div.row-users div.users i#plus {
   position: relative;
   font-size: 2rem;
-  left: 4rem;
+  left: 3.8rem;
   color: #ff72ac;
 }
 
@@ -1027,7 +1061,7 @@ div.projects div#project4 div.row-users h5 {
   font-size: 0.9rem;
   font-weight: 600;
   color: #ff72ac;
-  padding: 0.5rem 2rem;
+  padding: 0.5rem 8%;
   border-radius: 1.1rem;
 }
 
@@ -1202,13 +1236,13 @@ div.projects div#project5 div.row-users div.users #user-1 {
 }
 
 div.projects div#project5 div.row-users div.users #user-2 {
-  left: 1.8rem;
+  left: 1.55rem;
 }
 
 div.projects div#project5 div.row-users div.users i#plus {
   position: relative;
   font-size: 2rem;
-  left: 4rem;
+  left: 3.8rem;
   color: #6858ff;
 }
 
@@ -1218,13 +1252,13 @@ div.projects div#project5 div.row-users h5 {
   font-size: 0.9rem;
   font-weight: 600;
   color: #6858ff;
-  padding: 0.5rem 2rem;
+  padding: 0.5rem 8%;
   border-radius: 1.1rem;
 }
 
 div.projects div#project6 {
   border-radius: 2rem;
-  background-color: #dbf6fd;
+  background-color: #fff0d3;
 }
 
 div.projects div#project6 div.row-date {
@@ -1393,13 +1427,13 @@ div.projects div#project6 div.row-users div.users #user-1 {
 }
 
 div.projects div#project6 div.row-users div.users #user-2 {
-  left: 1.8rem;
+  left: 1.55rem;
 }
 
 div.projects div#project6 div.row-users div.users i#plus {
   position: relative;
   font-size: 2rem;
-  left: 4rem;
+  left: 3.8rem;
   color: #ffc554;
 }
 
@@ -1409,8 +1443,18 @@ div.projects div#project6 div.row-users h5 {
   font-size: 0.9rem;
   font-weight: 600;
   color: #ffc554;
-  padding: 0.5rem 2rem;
+  padding: 0.5rem 8%;
   border-radius: 1.1rem;
+}
+
+@media screen and (max-width: 600px) {
+  div.projects {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: minmax(auto, 500px);
+        grid-template-columns: minmax(auto, 500px);
+    grid-gap: 3rem 7%;
+  }
 }
 
 section.chats {
@@ -1516,6 +1560,9 @@ div.chat img {
 
 div.chat div.chat-detail {
   margin: 0 1rem 0 0.75rem;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
 }
 
 div.chat div.chat-detail div.row-title {
@@ -1582,7 +1629,8 @@ div.wrapper {
   border-radius: 2.5rem;
 }
 
-input[type="checkbox"], input[type="radio"] {
+input[type="checkbox"],
+input[type="radio"] {
   display: none;
 }
 
@@ -1748,8 +1796,33 @@ section.main-container div.container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-transition: left 600ms ease-in-out,width 600ms ease-in-out;
-  transition: left 600ms ease-in-out,width 600ms ease-in-out;
+  -webkit-transition: left 600ms ease-in-out, width 600ms ease-in-out;
+  transition: left 600ms ease-in-out, width 600ms ease-in-out;
+}
+
+@media screen and (max-width: 1000px) {
+  section.main-container div.container {
+    width: 99%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    left: 0%;
+    -webkit-transition: left 600ms ease-in-out, width 600ms ease-in-out;
+    transition: left 600ms ease-in-out, width 600ms ease-in-out;
+  }
+  input[name="navbar"]:checked ~ div.container {
+    width: 99%;
+    left: 0%;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  section.main-container div.container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
 }
 
 @media screen and (max-width: 800px) {

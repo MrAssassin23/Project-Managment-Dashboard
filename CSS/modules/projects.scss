@@ -70,12 +70,12 @@
           left: 0.2rem;
         }
         #user-2 {
-          left: 1.8rem;
+          left: 1.55rem;
         }
         i#plus {
           position: relative;
           font-size: 2rem;
-          left: 4rem;
+          left: 3.8rem;
           color: $main-clr;
         }
       }
@@ -83,7 +83,7 @@
         height: 2.2rem;
         background-color: $btn-bg;
         @include fontstyle(0.9rem, 600, $main-clr);
-        padding: 0.5rem 2rem;
+        padding: 0.5rem 8%;
         border-radius: 1.1rem;
       }
     }
@@ -148,11 +148,18 @@ div.project-status-container {
 div.projects {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-gap: 10%;
+  grid-gap: 4rem 10% ;
   @include project(project1, $theme-sky, $white, $background, $theme-sky-bg);
   @include project(project2, $theme-orange, $theme-orange-bg);
   @include project(project3, $theme-green, $theme-green-bg);
   @include project(project4, $theme-pink, $theme-pink-bg);
   @include project(project5, $theme-violet, $theme-violet-bg);
-  @include project(project6, $theme-yellow, $theme-sky-bg);
+  @include project(project6, $theme-yellow, $theme-yellow-bg);
+}
+@media screen and (max-width: 600px) {
+  div.projects {
+    display: grid;
+    grid-template-columns: minmax(auto,500px  );
+    grid-gap: 3rem 7% ;
+  }
 }

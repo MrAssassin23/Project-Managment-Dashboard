@@ -39,14 +39,15 @@ div.chat{
   }
   div.chat-detail{
     margin: 0 1rem 0 0.75rem;
+    flex: 1;
     div.row-title{
       @include displayflex($justify-content : space-between);
       h5{
         font-size: 1.25rem;
       }
-      label{
+      // label{
 
-      }
+      // }
     }
     div.row-content{
       position: relative;
