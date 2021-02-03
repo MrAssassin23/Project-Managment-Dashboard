@@ -6,12 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Project Management Dashboard</title>
     <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+        integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
+        crossorigin="anonymous" />
     <link rel="stylesheet" href="CSS/main.css">
 </head>
 
 <body>
-    <div class="wrapper">    
+    <div class="wrapper">
         <header>
             <label for="nav-toogle"><img src="Assests/nav-toogle.png" id="nav"> </label>
             <h1>Portfolio</h1>
@@ -58,12 +60,326 @@
                     <h4>Setings</h4>
                 </label>
             </nav>
+
             <div class="container">
                 <section class="projects">
+                    <div class="project-header">
+                        <h4 class="project-title">Projects</h4>
+                        <h4 class="project-date">Jan,2021</h4>
+                    </div>
 
+                    <div class="project-status-container">
+                        <div class="project-status">
+                            <div class="status-details">
+                                <h4>45</h4>
+                                <h5>In Progress</h5>
+                            </div>
+
+                            <div class="round-separator"><i class="far fa-circle "></i></div>
+
+                            <div class="status-details">
+                                <h4>12</h4>
+                                <h5>In Progress</h5>
+                            </div>
+
+                            <div class="round-separator"><i class="far fa-circle "></i></div>
+
+                            <div class="status-details">
+                                <h4>10</h4>
+                                <h5>Upcoming</h5>
+                            </div>
+
+                            <div class="round-separator"><i class="far fa-circle "></i></div>
+
+                            <div class="status-details">
+                                <h4>67</h4>
+                                <h5>Total Projects</h5>
+                            </div>
+                        </div>
+                        <div class="status-icons">
+                            <i class="fa fa-bars"></i>
+                            <i class="fa fa-th-large stroke-transparent"></i>
+                        </div>
+                    </div>
+
+                    <div class="projects">
+                        <div class="project" id="project1">
+                            <div class="row-date">
+                                <h6>July 2,2020</h6>
+                                <div class="other-icon">
+                                    <i class="fa fa-circle"></i>
+                                    <i class="fa fa-circle"></i>
+                                </div>
+                            </div>
+                            <div class="row-title">
+                                <h5>Web Designing</h5>
+                                <h6>Prototyping</h6>
+                            </div>
+                            <div class="row-progress">
+                                <h6>Progress</h6>
+                                <progress max='100' value='90'></progress>
+                                <h6 class="percentage">90%</h6>
+                            </div>
+                            <div class="row-users">
+                                <div class="users">
+                                    <img src="Assests/user1.jpg" class="project-user" id="user-1">
+                                    <img src="Assests/user2.jpg" class="project-user" id="user-2">
+                                    <i class="fa fa-plus-circle" id="plus"></i>
+                                </div>
+                                <h5>2 Days Left</h5>
+                            </div>
+                        </div>
+                        <div class="project" id="project2">
+                            <div class="row-date">
+                                <h6>July 5,2020</h6>
+                                <div class="other-icon">
+                                    <i class="fa fa-circle"></i>
+                                    <i class="fa fa-circle"></i>
+                                </div>
+                            </div>
+                            <div class="row-title">
+                                <h5>Mobile App</h5>
+                                <h6>Shopping</h6>
+                            </div>
+                            <div class="row-progress">
+                                <h6>Progress</h6>
+                                <progress max='100' value='30'></progress>
+                                <h6 class="percentage">30%</h6>
+                            </div>
+                            <div class="row-users">
+                                <div class="users">
+                                    <img src="Assests/user1.jpg" class="project-user" id="user-1">
+                                    <img src="Assests/user3.jpg" class="project-user" id="user-2">
+                                    <i class="fa fa-plus-circle" id="plus"></i>
+                                </div>
+                                <h5>3 Week Left</h5>
+                            </div>
+                        </div>
+                        <div class="project" id="project3">
+                            <div class="row-date">
+                                <h6>July 10,2020</h6>
+                                <div class="other-icon">
+                                    <i class="fa fa-circle"></i>
+                                    <i class="fa fa-circle"></i>
+                                </div>
+                            </div>
+                            <div class="row-title">
+                                <h5>Dashboard</h5>
+                                <h6>Medical</h6>
+                            </div>
+                            <div class="row-progress">
+                                <h6>Progress</h6>
+                                <progress max='100' value='50'></progress>
+                                <h6 class="percentage">50%</h6>
+                            </div>
+                            <div class="row-users">
+                                <div class="users">
+                                    <img src="Assests/user4.jpg" class="project-user" id="user-1">
+                                    <img src="Assests/user5.jpg" class="project-user" id="user-2">
+                                    <i class="fa fa-plus-circle" id="plus"></i>
+                                </div>
+                                <h5>2 Week Left</h5>
+                            </div>
+                        </div>
+                        <div class="project" id="project4">
+                            <div class="row-date">
+                                <h6>July 15,2020</h6>
+                                <div class="other-icon">
+                                    <i class="fa fa-circle"></i>
+                                    <i class="fa fa-circle"></i>
+                                </div>
+                            </div>
+                            <div class="row-title">
+                                <h5>Web Designing</h5>
+                                <h6>Wireframing</h6>
+                            </div>
+                            <div class="row-progress">
+                                <h6>Progress</h6>
+                                <progress max='100' value='20'></progress>
+                                <h6 class="percentage">20%</h6>
+                            </div>
+                            <div class="row-users">
+                                <div class="users">
+                                    <img src="Assests/user1.jpg" class="project-user" id="user-1">
+                                    <img src="Assests/user2.jpg" class="project-user" id="user-2">
+                                    <i class="fa fa-plus-circle" id="plus"></i>
+                                </div>
+                                <h5>2 Week Left</h5>
+                            </div>
+                        </div>
+                        <div class="project" id="project5">
+                            <div class="row-date">
+                                <h6>July 20,2020</h6>
+                                <div class="other-icon">
+                                    <i class="fa fa-circle"></i>
+                                    <i class="fa fa-circle"></i>
+                                </div>
+                            </div>
+                            <div class="row-title">
+                                <h5>Mobile App</h5>
+                                <h6>Online Classroom</h6>
+                            </div>
+                            <div class="row-progress">
+                                <h6>Progress</h6>
+                                <progress max='100' value='60'></progress>
+                                <h6 class="percentage">60%</h6>
+                            </div>
+                            <div class="row-users">
+                                <div class="users">
+                                    <img src="Assests/user3.jpg" class="project-user" id="user-1">
+                                    <img src="Assests/user5.jpg" class="project-user" id="user-2">
+                                    <i class="fa fa-plus-circle" id="plus"></i>
+                                </div>
+                                <h5>1 Week Left</h5>
+                            </div>
+                        </div>
+                        <div class="project" id="project6">
+                            <div class="row-date">
+                                <h6>July 25,2020</h6>
+                                <div class="other-icon">
+                                    <i class="fa fa-circle"></i>
+                                    <i class="fa fa-circle"></i>
+                                </div>
+                            </div>
+                            <div class="row-title">
+                                <h5>Database Design</h5>
+                                <h6>Shopping App</h6>
+                            </div>
+                            <div class="row-progress">
+                                <h6>Progress</h6>
+                                <progress max='100' value='25'></progress>
+                                <h6 class="percentage">25%</h6>
+                            </div>
+                            <div class="row-users">
+                                <div class="users">
+                                    <img src="Assests/user2.jpg" class="project-user" id="user-1">
+                                    <img src="Assests/user6.jpg" class="project-user" id="user-2">
+                                    <i class="fa fa-plus-circle" id="plus"></i>
+                                </div>
+                                <h5>3 Weeks Left</h5>
+                            </div>
+                        </div>
+                    </div>
                 </section>
-                <section class="chats">
 
+                <section class="chats">
+                    <div class="chat-header">
+                        <h4>Client Messages</h3>
+                            <div class="icons">
+                                <i class="fa fa-search"></i>
+                                <div class="other-icon">
+                                    <i class="fa fa-circle"></i>
+                                    <i class="fa fa-circle"></i>
+                                </div>
+                            </div>
+                    </div>
+                    <div class="chat-container">
+                        <div class="chat">
+                            <img src="Assests/user1.jpg" alt="">
+                            <div class="chat-detail">
+                                <div class="row-title">
+                                    <h5>David</h5>
+                                    <input type="checkbox" name="star" id="star">
+                                    <label for="star"><i class="far fa-star"></i></label>
+                                    <!-- <label for="star"><i class="fa fa-star"></i></label>   -->
+                                </div>
+                                <div class="row-content">
+                                    <h6>Hey Tell me about of project ? waiting for your response.</h6>
+                                    <h5>21 July</h5>
+                                </div>
+                            </div>
+                        </div>                        
+                        <div class="chat">
+                            <img src="Assests/user2.jpg" alt="">
+                            <div class="chat-detail">
+                                <div class="row-title">
+                                    <h5>Stephanie</h5>
+                                    <input type="checkbox" name="star" id="star">
+                                    <label for="star"><i class="far fa-star"></i></label>
+                                    <!-- <label for="star"><i class="fa fa-star"></i></label>   -->
+                                </div>
+                                <div class="row-content">
+                                    <h6>I got your first assignment. It was quite good. You can start work on onext assignment.</h6>
+                                    <h5>19 July</h5>
+                                </div>
+                            </div>
+                        </div>                        
+                        <div class="chat">
+                            <img src="Assests/user3.jpg" alt="">
+                            <div class="chat-detail">
+                                <div class="row-title">
+                                    <h5>William</h5>
+                                    <input type="checkbox" name="star" id="star">
+                                    <label for="star"><i class="far fa-star"></i></label>
+                                    <!-- <label for="star"><i class="fa fa-star"></i></label>   -->
+                                </div>
+                                <div class="row-content">
+                                    <h6>I want some changes in previous work you sent me. Waiting for  your reply</h6>
+                                    <h5>17 July</h5>
+                                </div>
+                            </div>
+                        </div>                        
+                        <div class="chat">
+                            <img src="Assests/user4.jpg" alt="">
+                            <div class="chat-detail">
+                                <div class="row-title">
+                                    <h5>Alona</h5>
+                                    <input type="checkbox" name="star" id="star">
+                                    <label for="star"><i class="far fa-star"></i></label>
+                                    <!-- <label for="star"><i class="fa fa-star"></i></label>   -->
+                                </div>
+                                <div class="row-content">
+                                    <h6>I am really impressed from your work. Keep doing great work</h6>
+                                    <h5>21 July</h5>
+                                </div>
+                            </div>
+                        </div>                        
+                        <div class="chat">
+                            <img src="Assests/user5.jpg" alt="">
+                            <div class="chat-detail">
+                                <div class="row-title">
+                                    <h5>Hira</h5>
+                                    <input type="checkbox" name="star" id="star">
+                                    <label for="star"><i class="far fa-star"></i></label>
+                                    <!-- <label for="star"><i class="fa fa-star"></i></label>   -->
+                                </div>
+                                <div class="row-content">
+                                    <h6>When you start redesign of app ? Previous project wad perfect.</h6>
+                                    <h5>21 July</h5>
+                                </div>
+                            </div>
+                        </div>                        
+                        <div class="chat">
+                            <img src="Assests/user6.jpg" alt="">
+                            <div class="chat-detail">
+                                <div class="row-title">
+                                    <h5>Ghulam</h5>
+                                    <input type="checkbox" name="star" id="star">
+                                    <label for="star"><i class="far fa-star"></i></label>
+                                    <!-- <label for="star"><i class="fa fa-star"></i></label>   -->
+                                </div>
+                                <div class="row-content">
+                                    <h6>I want to let you know i am agree on that design. You can work continue</h6>
+                                    <h5>23 July</h5>
+                                </div>
+                            </div>
+                        </div>                        
+                        <div class="chat">
+                            <img src="Assests/user7.jpg" alt="">
+                            <div class="chat-detail">
+                                <div class="row-title">
+                                    <h5>Jonas</h5>
+                                    <input type="checkbox" name="star" id="star">
+                                    <label for="star"><i class="far fa-star"></i></label>
+                                    <!-- <label for="star"><i class="fa fa-star"></i></label>   -->
+                                </div>
+                                <div class="row-content">
+                                    <h6>Hey! The design is beautiful and you can start implementing it.</h6>
+                                    <h5>2 July</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </section>
             </div>
         </section>

@@ -1,8 +1,158 @@
-section.projects{
-    flex: 0.65;
-    position: relative;
-    height: 500px;
-    background-color: $white;
-    border-top-left-radius:  2.5rem;
-    border-top-right-radius:  2.5rem;
+@mixin project($id, $main-clr, $bg-clr, $line-clr: $white, $btn-bg: $white) {
+  div##{$id} {
+    border-radius: 2rem;
+    background-color: $bg-clr;
+    div.row-date {
+      @include displayflex($justify-content: space-between);
+      padding: 2rem 1.5rem 1rem;
+      h6 {
+        @include fontstyle(0.9rem, 400, $font-light);
+      }
+      div.other-icon {
+        font-size: 0.45rem;
+        @include displayflex(column, $justify-content: space-between);
+      }
+    }
+    div.row-title {
+      @include displayflex(column, $align-item: center);
+      padding: 1rem 1.5rem;
+      h5 {
+        @include fontstyle(1.2rem, 600, $font-dark);
+      }
+      h6 {
+        @include fontstyle(1rem, 400, $font-light);
+      }
+    }
+    div.row-progress {
+      @include displayflex(column);
+      padding: 1rem 1.5rem;
+      h6 {
+        @include fontstyle(1rem, 600, $font-dark);
+      }
+      progress {
+        height: 0.5rem;
+        width: 100%;
+        border-radius: 1rem;
+        margin: 0.7rem 0;
+        &::-webkit-progress-bar {
+          background: $line-clr;
+          border-radius: 0.25rem;
+        }
+        &::-webkit-progress-value {
+          background: $main-clr;
+          border-top-left-radius: 0.25rem;
+          border-bottom-left-radius: 0.25rem;
+        }
+      }
+      h6.percentage {
+        @include fontstyle(1rem, 600, $font-dark);
+        align-self: flex-end;
+      }
+    }
+    div.row-users {
+      @include displayflex(
+        $align-item: center,
+        $justify-content: space-between
+      );
+      padding: 1rem 1.5rem;
+      border-top: 2px solid $line-clr;
+      div.users {
+        @include displayflex($align-item: center);
+        position: relative;
+        height: 2rem;
+        img.project-user {
+          width: 1.9rem;
+          border-radius: 50%;
+          position: absolute;
+          top: 0;
+        }
+        #user-1 {
+          left: 0.2rem;
+        }
+        #user-2 {
+          left: 1.8rem;
+        }
+        i#plus {
+          position: relative;
+          font-size: 2rem;
+          left: 4rem;
+          color: $main-clr;
+        }
+      }
+      h5 {
+        height: 2.2rem;
+        background-color: $btn-bg;
+        @include fontstyle(0.9rem, 600, $main-clr);
+        padding: 0.5rem 2rem;
+        border-radius: 1.1rem;
+      }
+    }
+  }
+}
+section.projects {
+  flex: 0.65;
+  position: relative;
+  height: calc(100vh - 6rem);
+  background-color: $white;
+  overflow-y: scroll;
+  border-top-left-radius: 2.5rem;
+  border-top-right-radius: 2.5rem;
+  padding: 2rem;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+div.project-header {
+  @include displayflex($justify-content: space-between);
+  margin: 1rem 0 2rem;
+  h4.project-title {
+    font-size: 1.4rem;
+  }
+  h4.project-date {
+    font-size: 1rem;
+  }
+}
+div.project-status-container {
+  @include displayflex($justify-content: space-between);
+  margin: 1.5rem 0;
+  div.project-status {
+    @include displayflex();
+    div.status-details {
+      h4 {
+        @include fontstyle(1.4rem, 700, $font-dark);
+      }
+      h5 {
+        @include fontstyle(0.8rem, 400, $font-light);
+      }
+    }
+  }
+  div.round-separator {
+    align-self: flex-end;
+    i {
+      @include fontstyle(0.5rem, 400, $font-light);
+      margin: 0 1.5rem;
+    }
+  }
+  div.status-icons {
+    i {
+      font-size: 1.3rem;
+      color: $font-dark;
+      padding: 0.7rem;
+    }
+    .stroke-transparent {
+      -webkit-text-stroke: 2.5px $font-dark;
+      -webkit-text-fill-color: transparent;
+    }
+  }
+}
+div.projects {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 10%;
+  @include project(project1, $theme-sky, $white, $background, $theme-sky-bg);
+  @include project(project2, $theme-orange, $theme-orange-bg);
+  @include project(project3, $theme-green, $theme-green-bg);
+  @include project(project4, $theme-pink, $theme-pink-bg);
+  @include project(project5, $theme-violet, $theme-violet-bg);
+  @include project(project6, $theme-yellow, $theme-sky-bg);
 }

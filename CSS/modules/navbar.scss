@@ -44,7 +44,8 @@ nav {
   }
   label {
     display: flex;
-    width: 3.2rem;
+    width: 3.3rem;
+    height: 3.3rem;
     align-items: center;
     justify-content: center;
     color: $font-light;
@@ -53,7 +54,7 @@ nav {
     &:hover {
       background-color: $font-dark;
       color: $white;
-      border-radius: 35px;
+      border-radius: 1.65rem;
       .stroke-transparent {
         -webkit-text-stroke: 2px $white;
         -webkit-text-fill-color: transparent;
@@ -63,7 +64,7 @@ nav {
   h4 {
     width: 0px;
     overflow: hidden;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     font-weight: 500;
     transition: width 600ms ease-in-out;
   }

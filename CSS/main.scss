@@ -17,15 +17,23 @@ $theme-violet-bg: #e9e7fd;
 $theme-yellow: #ffc554;
 $theme-yellow-bg: #fff0d3;
 $white: #ffffff;
-@import "./modules/navbar";
-@import "./modules/projects";
-@import "./modules/chats";
 
 @mixin fontstyle($size: 1rem, $weight: normal, $color: $font-light) {
   font-size: $size;
   font-weight: $weight;
   color: $color;
 }
+@mixin displayflex($direction:row, $align-item: stretch, $justify-content : flex-start){
+  display: flex;
+  flex-direction: $direction;
+  align-items: $align-item;
+  justify-content: $justify-content;
+}
+
+@import "./modules/navbar";
+@import "./modules/projects";
+@import "./modules/chats";
+
 * {
   box-sizing: border-box;
 }
@@ -52,8 +60,8 @@ input[type="checkbox"], input[type="radio"]{
   display: none;
 }
 input[name="navbar"]:checked ~ div.container{
-  width: 80%;
-  left: 19%;
+  width: 81%;
+  left: 18%;
 }
 .stroke-transparent {
   -webkit-text-stroke: 2px $font-light;

@@ -1,5 +1,62 @@
 section.chats {
   flex: 0.35;
-  height: 350px;
-//   background-color: $theme-pink;
+  height: calc(100vh - 6rem);
+  overflow-y: scroll;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+div.chat-header{
+  @include displayflex($align-item:center ,$justify-content : space-between);
+  margin-top: 2rem;
+  padding: 2rem;
+  border-bottom:  2px solid #DCDDDF;
+  h4{
+    font-size: 1.4rem;
+  }
+  div.icons{
+    font-size: 1.5rem;
+    width: 3.5rem;
+    @include displayflex($justify-content : space-between);
+    div.other-icon{
+      height: 1.4rem;
+      font-size: 0.45rem;
+      @include displayflex(column, $justify-content: space-between);
+    }
+  }
+}
+div.chat{
+  @include displayflex($justify-content : space-between);
+  padding: 1rem;
+  border-bottom:  2px solid #DCDDDF;
+  img{
+    width: 3.5rem;
+    height: 3.5rem;
+    border-radius: 1.75rem;
+    align-self: center;
+    box-sizing: content-box;
+    margin: 1rem 0.75rem 1rem 1rem;
+  }
+  div.chat-detail{
+    margin: 0 1rem 0 0.75rem;
+    div.row-title{
+      @include displayflex($justify-content : space-between);
+      h5{
+        font-size: 1.25rem;
+      }
+      label{
+
+      }
+    }
+    div.row-content{
+      position: relative;
+      h6{
+        @include fontstyle(0.9rem, 500, $font-dark);
+      }
+      h5{
+       text-align: right;
+       @include fontstyle(1rem, 500, $font-light);
+      }
+    }
+  }
 }

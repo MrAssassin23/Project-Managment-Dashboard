@@ -115,7 +115,8 @@ nav label {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 3.2rem;
+  width: 3.3rem;
+  height: 3.3rem;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -131,7 +132,7 @@ nav label {
 nav label:hover {
   background-color: #1f1c2f;
   color: #ffffff;
-  border-radius: 35px;
+  border-radius: 1.65rem;
 }
 
 nav label:hover .stroke-transparent {
@@ -142,7 +143,7 @@ nav label:hover .stroke-transparent {
 nav h4 {
   width: 0px;
   overflow: hidden;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   font-weight: 500;
   -webkit-transition: width 600ms ease-in-out;
   transition: width 600ms ease-in-out;
@@ -153,17 +154,1405 @@ section.projects {
       -ms-flex: 0.65;
           flex: 0.65;
   position: relative;
-  height: 500px;
+  height: calc(100vh - 6rem);
   background-color: #ffffff;
+  overflow-y: scroll;
   border-top-left-radius: 2.5rem;
   border-top-right-radius: 2.5rem;
+  padding: 2rem;
+}
+
+section.projects::-webkit-scrollbar {
+  display: none;
+}
+
+div.project-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 1rem 0 2rem;
+}
+
+div.project-header h4.project-title {
+  font-size: 1.4rem;
+}
+
+div.project-header h4.project-date {
+  font-size: 1rem;
+}
+
+div.project-status-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 1.5rem 0;
+}
+
+div.project-status-container div.project-status {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+div.project-status-container div.project-status div.status-details h4 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #1f1c2f;
+}
+
+div.project-status-container div.project-status div.status-details h5 {
+  font-size: 0.8rem;
+  font-weight: 400;
+  color: #898989;
+}
+
+div.project-status-container div.round-separator {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+}
+
+div.project-status-container div.round-separator i {
+  font-size: 0.5rem;
+  font-weight: 400;
+  color: #898989;
+  margin: 0 1.5rem;
+}
+
+div.project-status-container div.status-icons i {
+  font-size: 1.3rem;
+  color: #1f1c2f;
+  padding: 0.7rem;
+}
+
+div.project-status-container div.status-icons .stroke-transparent {
+  -webkit-text-stroke: 2.5px #1f1c2f;
+  -webkit-text-fill-color: transparent;
+}
+
+div.projects {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  grid-gap: 10%;
+}
+
+div.projects div#project1 {
+  border-radius: 2rem;
+  background-color: #ffffff;
+}
+
+div.projects div#project1 div.row-date {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 2rem 1.5rem 1rem;
+}
+
+div.projects div#project1 div.row-date h6 {
+  font-size: 0.9rem;
+  font-weight: 400;
+  color: #898989;
+}
+
+div.projects div#project1 div.row-date div.other-icon {
+  font-size: 0.45rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+div.projects div#project1 div.row-title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  padding: 1rem 1.5rem;
+}
+
+div.projects div#project1 div.row-title h5 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #1f1c2f;
+}
+
+div.projects div#project1 div.row-title h6 {
+  font-size: 1rem;
+  font-weight: 400;
+  color: #898989;
+}
+
+div.projects div#project1 div.row-progress {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  padding: 1rem 1.5rem;
+}
+
+div.projects div#project1 div.row-progress h6 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #1f1c2f;
+}
+
+div.projects div#project1 div.row-progress progress {
+  height: 0.5rem;
+  width: 100%;
+  border-radius: 1rem;
+  margin: 0.7rem 0;
+}
+
+div.projects div#project1 div.row-progress progress::-webkit-progress-bar {
+  background: #f3f6fd;
+  border-radius: 0.25rem;
+}
+
+div.projects div#project1 div.row-progress progress::-webkit-progress-value {
+  background: #2bc8ff;
+  border-top-left-radius: 0.25rem;
+  border-bottom-left-radius: 0.25rem;
+}
+
+div.projects div#project1 div.row-progress h6.percentage {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #1f1c2f;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+}
+
+div.projects div#project1 div.row-users {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 1rem 1.5rem;
+  border-top: 2px solid #f3f6fd;
+}
+
+div.projects div#project1 div.row-users div.users {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  position: relative;
+  height: 2rem;
+}
+
+div.projects div#project1 div.row-users div.users img.project-user {
+  width: 1.9rem;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+}
+
+div.projects div#project1 div.row-users div.users #user-1 {
+  left: 0.2rem;
+}
+
+div.projects div#project1 div.row-users div.users #user-2 {
+  left: 1.8rem;
+}
+
+div.projects div#project1 div.row-users div.users i#plus {
+  position: relative;
+  font-size: 2rem;
+  left: 4rem;
+  color: #2bc8ff;
+}
+
+div.projects div#project1 div.row-users h5 {
+  height: 2.2rem;
+  background-color: #dbf6fd;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #2bc8ff;
+  padding: 0.5rem 2rem;
+  border-radius: 1.1rem;
+}
+
+div.projects div#project2 {
+  border-radius: 2rem;
+  background-color: #fee4cb;
+}
+
+div.projects div#project2 div.row-date {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 2rem 1.5rem 1rem;
+}
+
+div.projects div#project2 div.row-date h6 {
+  font-size: 0.9rem;
+  font-weight: 400;
+  color: #898989;
+}
+
+div.projects div#project2 div.row-date div.other-icon {
+  font-size: 0.45rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+div.projects div#project2 div.row-title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  padding: 1rem 1.5rem;
+}
+
+div.projects div#project2 div.row-title h5 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #1f1c2f;
+}
+
+div.projects div#project2 div.row-title h6 {
+  font-size: 1rem;
+  font-weight: 400;
+  color: #898989;
+}
+
+div.projects div#project2 div.row-progress {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  padding: 1rem 1.5rem;
+}
+
+div.projects div#project2 div.row-progress h6 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #1f1c2f;
+}
+
+div.projects div#project2 div.row-progress progress {
+  height: 0.5rem;
+  width: 100%;
+  border-radius: 1rem;
+  margin: 0.7rem 0;
+}
+
+div.projects div#project2 div.row-progress progress::-webkit-progress-bar {
+  background: #ffffff;
+  border-radius: 0.25rem;
+}
+
+div.projects div#project2 div.row-progress progress::-webkit-progress-value {
+  background: #ff723a;
+  border-top-left-radius: 0.25rem;
+  border-bottom-left-radius: 0.25rem;
+}
+
+div.projects div#project2 div.row-progress h6.percentage {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #1f1c2f;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+}
+
+div.projects div#project2 div.row-users {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 1rem 1.5rem;
+  border-top: 2px solid #ffffff;
+}
+
+div.projects div#project2 div.row-users div.users {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  position: relative;
+  height: 2rem;
+}
+
+div.projects div#project2 div.row-users div.users img.project-user {
+  width: 1.9rem;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+}
+
+div.projects div#project2 div.row-users div.users #user-1 {
+  left: 0.2rem;
+}
+
+div.projects div#project2 div.row-users div.users #user-2 {
+  left: 1.8rem;
+}
+
+div.projects div#project2 div.row-users div.users i#plus {
+  position: relative;
+  font-size: 2rem;
+  left: 4rem;
+  color: #ff723a;
+}
+
+div.projects div#project2 div.row-users h5 {
+  height: 2.2rem;
+  background-color: #ffffff;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #ff723a;
+  padding: 0.5rem 2rem;
+  border-radius: 1.1rem;
+}
+
+div.projects div#project3 {
+  border-radius: 2rem;
+  background-color: #baf3d2;
+}
+
+div.projects div#project3 div.row-date {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 2rem 1.5rem 1rem;
+}
+
+div.projects div#project3 div.row-date h6 {
+  font-size: 0.9rem;
+  font-weight: 400;
+  color: #898989;
+}
+
+div.projects div#project3 div.row-date div.other-icon {
+  font-size: 0.45rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+div.projects div#project3 div.row-title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  padding: 1rem 1.5rem;
+}
+
+div.projects div#project3 div.row-title h5 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #1f1c2f;
+}
+
+div.projects div#project3 div.row-title h6 {
+  font-size: 1rem;
+  font-weight: 400;
+  color: #898989;
+}
+
+div.projects div#project3 div.row-progress {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  padding: 1rem 1.5rem;
+}
+
+div.projects div#project3 div.row-progress h6 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #1f1c2f;
+}
+
+div.projects div#project3 div.row-progress progress {
+  height: 0.5rem;
+  width: 100%;
+  border-radius: 1rem;
+  margin: 0.7rem 0;
+}
+
+div.projects div#project3 div.row-progress progress::-webkit-progress-bar {
+  background: #ffffff;
+  border-radius: 0.25rem;
+}
+
+div.projects div#project3 div.row-progress progress::-webkit-progress-value {
+  background: #02d052;
+  border-top-left-radius: 0.25rem;
+  border-bottom-left-radius: 0.25rem;
+}
+
+div.projects div#project3 div.row-progress h6.percentage {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #1f1c2f;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+}
+
+div.projects div#project3 div.row-users {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 1rem 1.5rem;
+  border-top: 2px solid #ffffff;
+}
+
+div.projects div#project3 div.row-users div.users {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  position: relative;
+  height: 2rem;
+}
+
+div.projects div#project3 div.row-users div.users img.project-user {
+  width: 1.9rem;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+}
+
+div.projects div#project3 div.row-users div.users #user-1 {
+  left: 0.2rem;
+}
+
+div.projects div#project3 div.row-users div.users #user-2 {
+  left: 1.8rem;
+}
+
+div.projects div#project3 div.row-users div.users i#plus {
+  position: relative;
+  font-size: 2rem;
+  left: 4rem;
+  color: #02d052;
+}
+
+div.projects div#project3 div.row-users h5 {
+  height: 2.2rem;
+  background-color: #ffffff;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #02d052;
+  padding: 0.5rem 2rem;
+  border-radius: 1.1rem;
+}
+
+div.projects div#project4 {
+  border-radius: 2rem;
+  background-color: #ffd3e2;
+}
+
+div.projects div#project4 div.row-date {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 2rem 1.5rem 1rem;
+}
+
+div.projects div#project4 div.row-date h6 {
+  font-size: 0.9rem;
+  font-weight: 400;
+  color: #898989;
+}
+
+div.projects div#project4 div.row-date div.other-icon {
+  font-size: 0.45rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+div.projects div#project4 div.row-title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  padding: 1rem 1.5rem;
+}
+
+div.projects div#project4 div.row-title h5 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #1f1c2f;
+}
+
+div.projects div#project4 div.row-title h6 {
+  font-size: 1rem;
+  font-weight: 400;
+  color: #898989;
+}
+
+div.projects div#project4 div.row-progress {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  padding: 1rem 1.5rem;
+}
+
+div.projects div#project4 div.row-progress h6 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #1f1c2f;
+}
+
+div.projects div#project4 div.row-progress progress {
+  height: 0.5rem;
+  width: 100%;
+  border-radius: 1rem;
+  margin: 0.7rem 0;
+}
+
+div.projects div#project4 div.row-progress progress::-webkit-progress-bar {
+  background: #ffffff;
+  border-radius: 0.25rem;
+}
+
+div.projects div#project4 div.row-progress progress::-webkit-progress-value {
+  background: #ff72ac;
+  border-top-left-radius: 0.25rem;
+  border-bottom-left-radius: 0.25rem;
+}
+
+div.projects div#project4 div.row-progress h6.percentage {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #1f1c2f;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+}
+
+div.projects div#project4 div.row-users {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 1rem 1.5rem;
+  border-top: 2px solid #ffffff;
+}
+
+div.projects div#project4 div.row-users div.users {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  position: relative;
+  height: 2rem;
+}
+
+div.projects div#project4 div.row-users div.users img.project-user {
+  width: 1.9rem;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+}
+
+div.projects div#project4 div.row-users div.users #user-1 {
+  left: 0.2rem;
+}
+
+div.projects div#project4 div.row-users div.users #user-2 {
+  left: 1.8rem;
+}
+
+div.projects div#project4 div.row-users div.users i#plus {
+  position: relative;
+  font-size: 2rem;
+  left: 4rem;
+  color: #ff72ac;
+}
+
+div.projects div#project4 div.row-users h5 {
+  height: 2.2rem;
+  background-color: #ffffff;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #ff72ac;
+  padding: 0.5rem 2rem;
+  border-radius: 1.1rem;
+}
+
+div.projects div#project5 {
+  border-radius: 2rem;
+  background-color: #e9e7fd;
+}
+
+div.projects div#project5 div.row-date {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 2rem 1.5rem 1rem;
+}
+
+div.projects div#project5 div.row-date h6 {
+  font-size: 0.9rem;
+  font-weight: 400;
+  color: #898989;
+}
+
+div.projects div#project5 div.row-date div.other-icon {
+  font-size: 0.45rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+div.projects div#project5 div.row-title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  padding: 1rem 1.5rem;
+}
+
+div.projects div#project5 div.row-title h5 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #1f1c2f;
+}
+
+div.projects div#project5 div.row-title h6 {
+  font-size: 1rem;
+  font-weight: 400;
+  color: #898989;
+}
+
+div.projects div#project5 div.row-progress {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  padding: 1rem 1.5rem;
+}
+
+div.projects div#project5 div.row-progress h6 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #1f1c2f;
+}
+
+div.projects div#project5 div.row-progress progress {
+  height: 0.5rem;
+  width: 100%;
+  border-radius: 1rem;
+  margin: 0.7rem 0;
+}
+
+div.projects div#project5 div.row-progress progress::-webkit-progress-bar {
+  background: #ffffff;
+  border-radius: 0.25rem;
+}
+
+div.projects div#project5 div.row-progress progress::-webkit-progress-value {
+  background: #6858ff;
+  border-top-left-radius: 0.25rem;
+  border-bottom-left-radius: 0.25rem;
+}
+
+div.projects div#project5 div.row-progress h6.percentage {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #1f1c2f;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+}
+
+div.projects div#project5 div.row-users {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 1rem 1.5rem;
+  border-top: 2px solid #ffffff;
+}
+
+div.projects div#project5 div.row-users div.users {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  position: relative;
+  height: 2rem;
+}
+
+div.projects div#project5 div.row-users div.users img.project-user {
+  width: 1.9rem;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+}
+
+div.projects div#project5 div.row-users div.users #user-1 {
+  left: 0.2rem;
+}
+
+div.projects div#project5 div.row-users div.users #user-2 {
+  left: 1.8rem;
+}
+
+div.projects div#project5 div.row-users div.users i#plus {
+  position: relative;
+  font-size: 2rem;
+  left: 4rem;
+  color: #6858ff;
+}
+
+div.projects div#project5 div.row-users h5 {
+  height: 2.2rem;
+  background-color: #ffffff;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #6858ff;
+  padding: 0.5rem 2rem;
+  border-radius: 1.1rem;
+}
+
+div.projects div#project6 {
+  border-radius: 2rem;
+  background-color: #dbf6fd;
+}
+
+div.projects div#project6 div.row-date {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 2rem 1.5rem 1rem;
+}
+
+div.projects div#project6 div.row-date h6 {
+  font-size: 0.9rem;
+  font-weight: 400;
+  color: #898989;
+}
+
+div.projects div#project6 div.row-date div.other-icon {
+  font-size: 0.45rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+div.projects div#project6 div.row-title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  padding: 1rem 1.5rem;
+}
+
+div.projects div#project6 div.row-title h5 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #1f1c2f;
+}
+
+div.projects div#project6 div.row-title h6 {
+  font-size: 1rem;
+  font-weight: 400;
+  color: #898989;
+}
+
+div.projects div#project6 div.row-progress {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  padding: 1rem 1.5rem;
+}
+
+div.projects div#project6 div.row-progress h6 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #1f1c2f;
+}
+
+div.projects div#project6 div.row-progress progress {
+  height: 0.5rem;
+  width: 100%;
+  border-radius: 1rem;
+  margin: 0.7rem 0;
+}
+
+div.projects div#project6 div.row-progress progress::-webkit-progress-bar {
+  background: #ffffff;
+  border-radius: 0.25rem;
+}
+
+div.projects div#project6 div.row-progress progress::-webkit-progress-value {
+  background: #ffc554;
+  border-top-left-radius: 0.25rem;
+  border-bottom-left-radius: 0.25rem;
+}
+
+div.projects div#project6 div.row-progress h6.percentage {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #1f1c2f;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+}
+
+div.projects div#project6 div.row-users {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 1rem 1.5rem;
+  border-top: 2px solid #ffffff;
+}
+
+div.projects div#project6 div.row-users div.users {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  position: relative;
+  height: 2rem;
+}
+
+div.projects div#project6 div.row-users div.users img.project-user {
+  width: 1.9rem;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+}
+
+div.projects div#project6 div.row-users div.users #user-1 {
+  left: 0.2rem;
+}
+
+div.projects div#project6 div.row-users div.users #user-2 {
+  left: 1.8rem;
+}
+
+div.projects div#project6 div.row-users div.users i#plus {
+  position: relative;
+  font-size: 2rem;
+  left: 4rem;
+  color: #ffc554;
+}
+
+div.projects div#project6 div.row-users h5 {
+  height: 2.2rem;
+  background-color: #ffffff;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #ffc554;
+  padding: 0.5rem 2rem;
+  border-radius: 1.1rem;
 }
 
 section.chats {
   -webkit-box-flex: 0.35;
       -ms-flex: 0.35;
           flex: 0.35;
-  height: 350px;
+  height: calc(100vh - 6rem);
+  overflow-y: scroll;
+}
+
+section.chats::-webkit-scrollbar {
+  display: none;
+}
+
+div.chat-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 2rem;
+  padding: 2rem;
+  border-bottom: 2px solid #DCDDDF;
+}
+
+div.chat-header h4 {
+  font-size: 1.4rem;
+}
+
+div.chat-header div.icons {
+  font-size: 1.5rem;
+  width: 3.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+div.chat-header div.icons div.other-icon {
+  height: 1.4rem;
+  font-size: 0.45rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+div.chat {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 1rem;
+  border-bottom: 2px solid #DCDDDF;
+}
+
+div.chat img {
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 1.75rem;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+  margin: 1rem 0.75rem 1rem 1rem;
+}
+
+div.chat div.chat-detail {
+  margin: 0 1rem 0 0.75rem;
+}
+
+div.chat div.chat-detail div.row-title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+div.chat div.chat-detail div.row-title h5 {
+  font-size: 1.25rem;
+}
+
+div.chat div.chat-detail div.row-content {
+  position: relative;
+}
+
+div.chat div.chat-detail div.row-content h6 {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #1f1c2f;
+}
+
+div.chat div.chat-detail div.row-content h5 {
+  text-align: right;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #898989;
 }
 
 * {
@@ -198,8 +1587,8 @@ input[type="checkbox"], input[type="radio"] {
 }
 
 input[name="navbar"]:checked ~ div.container {
-  width: 80%;
-  left: 19%;
+  width: 81%;
+  left: 18%;
 }
 
 .stroke-transparent {

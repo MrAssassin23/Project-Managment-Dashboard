@@ -2,6 +2,10 @@ section.chats {
   -webkit-box-flex: 0.35;
       -ms-flex: 0.35;
           flex: 0.35;
-  height: 350px;
+}
+
+div.chat-container img {
+  width: 5rem;
+  border-radius: 2.5rem;
 }
 /*# sourceMappingURL=chats.css.map */
