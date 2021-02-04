@@ -2,6 +2,11 @@
   div##{$id} {
     border-radius: 2rem;
     background-color: $bg-clr;
+    transition: box-shadow 300ms;
+    box-shadow: 0 0.1rem 1rem rgba($color: #000000, $alpha: 0.25) ;
+    &:hover{
+      box-shadow: 0 0.1rem 1.6rem rgba($color: #000000, $alpha: 0.25) ;
+    }
     div.row-date {
       @include displayflex($justify-content: space-between);
       padding: 2rem 1.5rem 1rem;
@@ -10,6 +15,7 @@
       }
       div.other-icon {
         font-size: 0.45rem;
+        cursor: pointer;
         @include displayflex(column, $justify-content: space-between);
       }
     }
@@ -89,10 +95,11 @@
     }
   }
 }
+
 section.projects {
   flex: 0.65;
   position: relative;
-  height: calc(100vh - 6rem);
+  height: calc(100vh - 5.6rem);
   background-color: $white;
   overflow-y: scroll;
   border-top-left-radius: 2.5rem;
@@ -102,6 +109,7 @@ section.projects {
     display: none;
   }
 }
+
 div.project-header {
   @include displayflex($justify-content: space-between);
   margin: 1rem 0 2rem;
@@ -112,9 +120,12 @@ div.project-header {
     font-size: 1rem;
   }
 }
+
 div.project-status-container {
-  @include displayflex($justify-content: space-between);
+  display: grid;
   margin: 1.5rem 0;
+  grid-template-columns: minmax(4rem, auto) minmax(4rem, auto);
+  justify-content: space-between;
   div.project-status {
     @include displayflex();
     div.status-details {
@@ -145,10 +156,11 @@ div.project-status-container {
     }
   }
 }
+
 div.projects {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-gap: 4rem 10% ;
+  grid-gap: 3rem 8%;
   @include project(project1, $theme-sky, $white, $background, $theme-sky-bg);
   @include project(project2, $theme-orange, $theme-orange-bg);
   @include project(project3, $theme-green, $theme-green-bg);
@@ -156,10 +168,28 @@ div.projects {
   @include project(project5, $theme-violet, $theme-violet-bg);
   @include project(project6, $theme-yellow, $theme-yellow-bg);
 }
-@media screen and (max-width: 600px) {
+@media screen and (min-width: 1300px) {
   div.projects {
-    display: grid;
-    grid-template-columns: minmax(auto,500px  );
-    grid-gap: 3rem 7% ;
+    grid-gap: 5rem 12%;
+  }
+  section.projects {
+    padding: 2.5rem 3.5rem;
+  }
+}
+@media screen and (max-width: 620px) {
+  div.projects {
+    grid-template-columns: minmax(auto, 500px);
+    grid-gap: 3rem 7%;
+  }
+  div.project-status-container {
+    grid-template-columns: 1fr;
+  }
+  div.status-icons {
+    justify-self: end;
+  }
+  div.round-separator {
+    i {
+      margin: 0 1rem !important;
+    }
   }
 }

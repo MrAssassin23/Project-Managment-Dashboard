@@ -46,6 +46,7 @@ body {
   margin: 0;
   width: 100%;
   font-family: "Poppins", sans-serif;
+  
 }
 h1,
 h2,
@@ -58,7 +59,6 @@ h6 {
 div.wrapper {
   background-color: $background;
   width: 100%;
-  border-radius: 2.5rem;
 }
 input[type="checkbox"],
 input[type="radio"] {
@@ -82,9 +82,7 @@ header {
   gap: 1rem 0px;
   z-index: 9;
   background-color: $background;
-  border-top-left-radius: 2.5rem;
-  border-top-right-radius: 2.5rem;
-  grid-template-columns: 8.5% 25% 35% 1fr repeat(5, minmax(40px, auto));
+  grid-template-columns: 8.5% 25% 30% 1fr repeat(5, minmax(40px, auto));
   grid-template-areas: "nav title search spacer plus notification hr profile name";
   label {
     margin: 10px auto;
@@ -152,6 +150,11 @@ header {
 }
 section.main-container {
   position: relative;
+  height: calc(100vh - 5.6rem);
+  overflow-y: scroll;
+  &::-webkit-scrollbar{
+    display: none;
+  }
   div.container {
     width: 90%;
     position: relative;

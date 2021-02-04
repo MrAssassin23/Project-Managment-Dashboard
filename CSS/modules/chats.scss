@@ -1,10 +1,6 @@
 section.chats {
   flex: 0.35;
-  height: calc(100vh - 6rem);
-  overflow-y: scroll;
-  &::-webkit-scrollbar {
-    display: none;
-  }
+  
 }
 div.chat-header{
   @include displayflex($align-item:center ,$justify-content : space-between);
@@ -21,14 +17,23 @@ div.chat-header{
     div.other-icon{
       height: 1.4rem;
       font-size: 0.45rem;
+      cursor: pointer;
       @include displayflex(column, $justify-content: space-between);
     }
+  }
+}
+div.chat-container{
+  height: calc(100vh - 13.875rem);
+  overflow-y: scroll;
+  &::-webkit-scrollbar {
+    display: none;
   }
 }
 div.chat{
   @include displayflex($justify-content : space-between);
   padding: 1rem;
   border-bottom:  2px solid #DCDDDF;
+  
   img{
     width: 3.5rem;
     height: 3.5rem;

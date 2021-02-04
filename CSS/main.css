@@ -188,7 +188,7 @@ section.projects {
       -ms-flex: 0.65;
           flex: 0.65;
   position: relative;
-  height: calc(100vh - 6rem);
+  height: calc(100vh - 5.6rem);
   background-color: #ffffff;
   overflow-y: scroll;
   border-top-left-radius: 2.5rem;
@@ -226,20 +226,14 @@ div.project-header h4.project-date {
 }
 
 div.project-status-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-align: stretch;
-      -ms-flex-align: stretch;
-          align-items: stretch;
+  display: -ms-grid;
+  display: grid;
+  margin: 1.5rem 0;
+  -ms-grid-columns: minmax(4rem, auto) minmax(4rem, auto);
+      grid-template-columns: minmax(4rem, auto) minmax(4rem, auto);
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  margin: 1.5rem 0;
 }
 
 div.project-status-container div.project-status {
@@ -298,12 +292,23 @@ div.projects {
   display: grid;
   -ms-grid-columns: 1fr 1fr;
       grid-template-columns: 1fr 1fr;
-  grid-gap: 4rem 10%;
+  grid-gap: 3rem 8%;
 }
 
 div.projects div#project1 {
   border-radius: 2rem;
   background-color: #ffffff;
+  -webkit-transition: -webkit-box-shadow 300ms;
+  transition: -webkit-box-shadow 300ms;
+  transition: box-shadow 300ms;
+  transition: box-shadow 300ms, -webkit-box-shadow 300ms;
+  -webkit-box-shadow: 0 0.1rem 1rem rgba(0, 0, 0, 0.25);
+          box-shadow: 0 0.1rem 1rem rgba(0, 0, 0, 0.25);
+}
+
+div.projects div#project1:hover {
+  -webkit-box-shadow: 0 0.1rem 1.6rem rgba(0, 0, 0, 0.25);
+          box-shadow: 0 0.1rem 1.6rem rgba(0, 0, 0, 0.25);
 }
 
 div.projects div#project1 div.row-date {
@@ -331,6 +336,7 @@ div.projects div#project1 div.row-date h6 {
 
 div.projects div#project1 div.row-date div.other-icon {
   font-size: 0.45rem;
+  cursor: pointer;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -495,6 +501,17 @@ div.projects div#project1 div.row-users h5 {
 div.projects div#project2 {
   border-radius: 2rem;
   background-color: #fee4cb;
+  -webkit-transition: -webkit-box-shadow 300ms;
+  transition: -webkit-box-shadow 300ms;
+  transition: box-shadow 300ms;
+  transition: box-shadow 300ms, -webkit-box-shadow 300ms;
+  -webkit-box-shadow: 0 0.1rem 1rem rgba(0, 0, 0, 0.25);
+          box-shadow: 0 0.1rem 1rem rgba(0, 0, 0, 0.25);
+}
+
+div.projects div#project2:hover {
+  -webkit-box-shadow: 0 0.1rem 1.6rem rgba(0, 0, 0, 0.25);
+          box-shadow: 0 0.1rem 1.6rem rgba(0, 0, 0, 0.25);
 }
 
 div.projects div#project2 div.row-date {
@@ -522,6 +539,7 @@ div.projects div#project2 div.row-date h6 {
 
 div.projects div#project2 div.row-date div.other-icon {
   font-size: 0.45rem;
+  cursor: pointer;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -686,6 +704,17 @@ div.projects div#project2 div.row-users h5 {
 div.projects div#project3 {
   border-radius: 2rem;
   background-color: #baf3d2;
+  -webkit-transition: -webkit-box-shadow 300ms;
+  transition: -webkit-box-shadow 300ms;
+  transition: box-shadow 300ms;
+  transition: box-shadow 300ms, -webkit-box-shadow 300ms;
+  -webkit-box-shadow: 0 0.1rem 1rem rgba(0, 0, 0, 0.25);
+          box-shadow: 0 0.1rem 1rem rgba(0, 0, 0, 0.25);
+}
+
+div.projects div#project3:hover {
+  -webkit-box-shadow: 0 0.1rem 1.6rem rgba(0, 0, 0, 0.25);
+          box-shadow: 0 0.1rem 1.6rem rgba(0, 0, 0, 0.25);
 }
 
 div.projects div#project3 div.row-date {
@@ -713,6 +742,7 @@ div.projects div#project3 div.row-date h6 {
 
 div.projects div#project3 div.row-date div.other-icon {
   font-size: 0.45rem;
+  cursor: pointer;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -877,6 +907,17 @@ div.projects div#project3 div.row-users h5 {
 div.projects div#project4 {
   border-radius: 2rem;
   background-color: #ffd3e2;
+  -webkit-transition: -webkit-box-shadow 300ms;
+  transition: -webkit-box-shadow 300ms;
+  transition: box-shadow 300ms;
+  transition: box-shadow 300ms, -webkit-box-shadow 300ms;
+  -webkit-box-shadow: 0 0.1rem 1rem rgba(0, 0, 0, 0.25);
+          box-shadow: 0 0.1rem 1rem rgba(0, 0, 0, 0.25);
+}
+
+div.projects div#project4:hover {
+  -webkit-box-shadow: 0 0.1rem 1.6rem rgba(0, 0, 0, 0.25);
+          box-shadow: 0 0.1rem 1.6rem rgba(0, 0, 0, 0.25);
 }
 
 div.projects div#project4 div.row-date {
@@ -904,6 +945,7 @@ div.projects div#project4 div.row-date h6 {
 
 div.projects div#project4 div.row-date div.other-icon {
   font-size: 0.45rem;
+  cursor: pointer;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1068,6 +1110,17 @@ div.projects div#project4 div.row-users h5 {
 div.projects div#project5 {
   border-radius: 2rem;
   background-color: #e9e7fd;
+  -webkit-transition: -webkit-box-shadow 300ms;
+  transition: -webkit-box-shadow 300ms;
+  transition: box-shadow 300ms;
+  transition: box-shadow 300ms, -webkit-box-shadow 300ms;
+  -webkit-box-shadow: 0 0.1rem 1rem rgba(0, 0, 0, 0.25);
+          box-shadow: 0 0.1rem 1rem rgba(0, 0, 0, 0.25);
+}
+
+div.projects div#project5:hover {
+  -webkit-box-shadow: 0 0.1rem 1.6rem rgba(0, 0, 0, 0.25);
+          box-shadow: 0 0.1rem 1.6rem rgba(0, 0, 0, 0.25);
 }
 
 div.projects div#project5 div.row-date {
@@ -1095,6 +1148,7 @@ div.projects div#project5 div.row-date h6 {
 
 div.projects div#project5 div.row-date div.other-icon {
   font-size: 0.45rem;
+  cursor: pointer;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1259,6 +1313,17 @@ div.projects div#project5 div.row-users h5 {
 div.projects div#project6 {
   border-radius: 2rem;
   background-color: #fff0d3;
+  -webkit-transition: -webkit-box-shadow 300ms;
+  transition: -webkit-box-shadow 300ms;
+  transition: box-shadow 300ms;
+  transition: box-shadow 300ms, -webkit-box-shadow 300ms;
+  -webkit-box-shadow: 0 0.1rem 1rem rgba(0, 0, 0, 0.25);
+          box-shadow: 0 0.1rem 1rem rgba(0, 0, 0, 0.25);
+}
+
+div.projects div#project6:hover {
+  -webkit-box-shadow: 0 0.1rem 1.6rem rgba(0, 0, 0, 0.25);
+          box-shadow: 0 0.1rem 1.6rem rgba(0, 0, 0, 0.25);
 }
 
 div.projects div#project6 div.row-date {
@@ -1286,6 +1351,7 @@ div.projects div#project6 div.row-date h6 {
 
 div.projects div#project6 div.row-date div.other-icon {
   font-size: 0.45rem;
+  cursor: pointer;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1447,13 +1513,31 @@ div.projects div#project6 div.row-users h5 {
   border-radius: 1.1rem;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (min-width: 1300px) {
   div.projects {
-    display: -ms-grid;
-    display: grid;
+    grid-gap: 5rem 12%;
+  }
+  section.projects {
+    padding: 2.5rem 3.5rem;
+  }
+}
+
+@media screen and (max-width: 620px) {
+  div.projects {
     -ms-grid-columns: minmax(auto, 500px);
         grid-template-columns: minmax(auto, 500px);
     grid-gap: 3rem 7%;
+  }
+  div.project-status-container {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+  div.status-icons {
+    -ms-grid-column-align: end;
+        justify-self: end;
+  }
+  div.round-separator i {
+    margin: 0 1rem !important;
   }
 }
 
@@ -1461,12 +1545,6 @@ section.chats {
   -webkit-box-flex: 0.35;
       -ms-flex: 0.35;
           flex: 0.35;
-  height: calc(100vh - 6rem);
-  overflow-y: scroll;
-}
-
-section.chats::-webkit-scrollbar {
-  display: none;
 }
 
 div.chat-header {
@@ -1513,6 +1591,7 @@ div.chat-header div.icons {
 div.chat-header div.icons div.other-icon {
   height: 1.4rem;
   font-size: 0.45rem;
+  cursor: pointer;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1526,6 +1605,15 @@ div.chat-header div.icons div.other-icon {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+
+div.chat-container {
+  height: calc(100vh - 13.875rem);
+  overflow-y: scroll;
+}
+
+div.chat-container::-webkit-scrollbar {
+  display: none;
 }
 
 div.chat {
@@ -1626,7 +1714,6 @@ h6 {
 div.wrapper {
   background-color: #f3f6fd;
   width: 100%;
-  border-radius: 2.5rem;
 }
 
 input[type="checkbox"],
@@ -1658,10 +1745,8 @@ header {
   gap: 1rem 0px;
   z-index: 9;
   background-color: #f3f6fd;
-  border-top-left-radius: 2.5rem;
-  border-top-right-radius: 2.5rem;
-  -ms-grid-columns: 8.5% 25% 35% 1fr (minmax(40px, auto))[5];
-      grid-template-columns: 8.5% 25% 35% 1fr repeat(5, minmax(40px, auto));
+  -ms-grid-columns: 8.5% 25% 30% 1fr (minmax(40px, auto))[5];
+      grid-template-columns: 8.5% 25% 30% 1fr repeat(5, minmax(40px, auto));
       grid-template-areas: "nav title search spacer plus notification hr profile name";
 }
 
@@ -1787,6 +1872,12 @@ header h4 {
 
 section.main-container {
   position: relative;
+  height: calc(100vh - 5.6rem);
+  overflow-y: scroll;
+}
+
+section.main-container::-webkit-scrollbar {
+  display: none;
 }
 
 section.main-container div.container {
